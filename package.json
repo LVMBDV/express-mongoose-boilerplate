@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "start": "ts-node src/server.ts",
     "test": "jest"
   },
   "devDependencies": {
@@ -16,5 +17,11 @@
       "**/tests/**/*.[jt]s?(x)",
       "**/?(*.)+(spec|test).[jt]s?(x)"
     ]
+  },
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.3"
   }
 }
