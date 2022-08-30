@@ -3,11 +3,10 @@ import mongoose from "mongoose";
 import "dotenv/config";
 
 async function setupApp() {
-    await mongoose.connect(
-        process.env["MONGO_URI"] ?? "mongodb://localhost/db",
-        { autoIndex: false }
-    );
-    
+    const mongoURI = process.env["MONGO_URI"] ?? "mongodb://localhost/db";
+    console.log(`Connecting to MongoDB instance at '${mongoURI}'...`);
+    await mongoose.connect(mongoURI, { autoIndex: false });
+
     return express();
 }
 
